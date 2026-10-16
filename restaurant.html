@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>山野小馆 | 云南菌菇火锅 · 山野私房菜</title>
+<meta name="description" content="山野小馆，每日空运云南野生菌，地道山野风味。在线订座，包间预订。">
+<style>
+:root{--red:#b8432f;--red-d:#8e2f1f;--gold:#d9a441;--cream:#faf5ec;--ink:#2a211b;--muted:#7a6a5c;--line:#ead9c3}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--cream);line-height:1.7}
+a{color:inherit;text-decoration:none}
+.serif{font-family:"Songti SC","STSong","SimSun",serif}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.3s}
+header.solid{background:rgba(42,33,27,.95);box-shadow:0 2px 20px rgba(0,0,0,.2)}
+.nav{display:flex;justify-content:space-between;align-items:center;height:72px;color:#fff}
+.logo{font-size:24px;font-weight:700;letter-spacing:4px;display:flex;align-items:center;gap:10px}
+.seal{width:36px;height:36px;border:2px solid var(--gold);color:var(--gold);display:grid;place-items:center;font-size:16px;letter-spacing:0;border-radius:4px}
+nav ul{display:flex;gap:32px;list-style:none;font-size:15px}
+nav a:hover{color:var(--gold)}
+.book{background:var(--red);padding:9px 22px;border-radius:30px;font-size:15px;font-weight:600;color:#fff}
+.book:hover{background:var(--red-d)}
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;color:#fff;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(23,14,9,.92) 0%,rgba(23,14,9,.7) 50%,rgba(23,14,9,.35) 100%),url("https://images.unsplash.com/photo-1791409700531-97f719405fa8?auto=format&fit=crop&w=1800&q=75") center/cover}
+.hero svg.mtn{position:absolute;bottom:0;left:0;width:100%;height:55%}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero small{letter-spacing:6px;color:var(--gold);font-size:14px}
+.hero h1{font-size:64px;line-height:1.2;margin:16px 0 22px;letter-spacing:6px}
+.hero p{font-size:18px;opacity:.85;max-width:480px;margin-bottom:36px}
+.btn{display:inline-block;padding:14px 34px;border-radius:30px;font-weight:600;font-size:16px;transition:.2s;border:2px solid transparent;cursor:pointer}
+.btn-r{background:var(--red);color:#fff}.btn-r:hover{background:var(--red-d)}
+.btn-l{border-color:rgba(255,255,255,.6);color:#fff;margin-left:12px}.btn-l:hover{background:rgba(255,255,255,.1)}
+.hours{display:table;margin-top:40px;background:rgba(255,255,255,.08);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15);color:#fff;padding:18px 24px;border-radius:12px;font-size:14px}
+.hours b{color:var(--gold);display:block;font-size:13px;letter-spacing:2px}
+section{padding:96px 0}
+.sec-h{text-align:center;margin-bottom:56px}
+.sec-h small{color:var(--red);letter-spacing:4px;font-size:13px;font-weight:700}
+.sec-h h2{font-size:38px;margin:8px 0;letter-spacing:3px}
+.sec-h p{color:var(--muted)}
+.divider{width:60px;height:3px;background:var(--gold);margin:14px auto 0}
+/* story */
+.story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.story-img{position:relative;aspect-ratio:1;border-radius:50% 50% 12px 12px;overflow:hidden;background:linear-gradient(180deg,#e9c99a,#b8432f)}
+.story-img img{width:100%;height:100%;object-fit:cover;display:block}
+.story h2{font-size:34px;margin-bottom:20px;letter-spacing:2px}
+.story p{color:var(--muted);margin-bottom:16px;font-size:16px}
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.feat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;text-align:center}
+.feat b{display:block;font-size:26px;color:var(--red)}
+.feat span{font-size:13px;color:var(--muted)}
+/* menu */
+.menu{background:#fff}
+.tabs{display:flex;justify-content:center;gap:12px;margin-bottom:44px;flex-wrap:wrap}
+.tab{padding:9px 24px;border-radius:30px;border:1px solid var(--line);background:var(--cream);cursor:pointer;font:inherit;font-size:15px;color:var(--ink);transition:.2s}
+.tab.on,.tab:hover{background:var(--red);color:#fff;border-color:var(--red)}
+.dishes{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.dish{background:var(--cream);border-radius:14px;overflow:hidden;transition:.25s}
+.dish:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(142,47,31,.12)}
+.dish-img{aspect-ratio:4/3;display:grid;place-items:center;position:relative}
+.dish-img{overflow:hidden}.dish-img img{width:100%;height:100%;object-fit:cover;display:block;transition:.4s}.dish:hover .dish-img img{transform:scale(1.06)}.hot{z-index:2}
+.hot{position:absolute;top:14px;left:14px;background:var(--red);color:#fff;font-size:12px;padding:3px 12px;border-radius:20px}
+.dish-b{padding:20px 22px}
+.dish-b .t{display:flex;justify-content:space-between;align-items:baseline}
+.dish-b h4{font-size:19px}
+.price{color:var(--red);font-weight:700;font-size:20px}
+.price small{font-size:13px}
+.dish-b p{color:var(--muted);font-size:14px;margin-top:6px}
+.dish.hide{display:none}
+/* env */
+.env-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:200px 200px;gap:16px}
+.env-grid div{border-radius:14px;overflow:hidden;position:relative;display:flex;align-items:flex-end;padding:18px;color:#fff;font-weight:600}
+.env-grid div:first-child{grid-row:span 2}
+.env-grid div span{position:relative;z-index:2;background:rgba(0,0,0,.35);padding:4px 12px;border-radius:20px;font-size:14px}
+/* reviews */
+.reviews{background:var(--ink);color:#fff}
+.reviews .sec-h p{color:rgba(255,255,255,.6)}
+.reviews .sec-h small{color:var(--gold)}
+.rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rv{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:28px}
+.stars{color:var(--gold);letter-spacing:3px;margin-bottom:12px}
+.rv p{opacity:.85;font-size:15px;margin-bottom:18px}
+.rv .who{display:flex;align-items:center;gap:12px;font-size:14px;opacity:.7}
+.av{width:38px;height:38px;border-radius:50%;background:var(--red);display:grid;place-items:center;font-weight:700}
+.note{text-align:center;font-size:12px;opacity:.45;margin-top:24px}
+/* booking */
+.booking .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.bk-info h2{font-size:34px;margin-bottom:16px;letter-spacing:2px}
+.bk-info>p{color:var(--muted);margin-bottom:28px}
+.line{display:flex;gap:14px;padding:16px 0;border-bottom:1px dashed var(--line)}
+.line i{font-style:normal;width:40px;height:40px;flex:none;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;color:var(--red)}
+.line b{display:block}
+.line span{color:var(--muted);font-size:14px}
+form{background:#fff;padding:36px;border-radius:16px;box-shadow:0 20px 50px rgba(142,47,31,.1);border-top:4px solid var(--red)}
+form h3{font-size:22px;margin-bottom:20px}
+.r2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
+input,select,textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;font-size:15px;margin-bottom:16px;background:var(--cream)}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--red);background:#fff}
+.seats{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.seats label{flex:1;min-width:70px;margin:0;cursor:pointer}
+.seats input{display:none}
+.seats span{display:block;text-align:center;padding:10px;border:1px solid var(--line);border-radius:10px;font-weight:500;background:var(--cream)}
+.seats input:checked+span{background:var(--red);color:#fff;border-color:var(--red)}
+form .btn{width:100%}
+.ok{display:none;margin-top:14px;text-align:center;color:#2d7a46;background:#eaf6ee;padding:12px;border-radius:10px}
+footer{background:#170e09;color:rgba(255,255,255,.6);text-align:center;padding:40px 20px;font-size:14px}
+footer .logo{justify-content:center;color:#fff;margin-bottom:12px}
+.mbar{display:none}
+.burger{display:none;background:none;border:0;cursor:pointer}
+.burger span{display:block;width:24px;height:2px;background:#fff;margin:5px 0}
+@media(max-width:900px){
+ nav ul,.book{display:none}
+ .burger{display:block}
+ nav.open ul{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:rgba(42,33,27,.98);padding:20px;gap:16px}
+ .hero h1{font-size:42px}
+ .story .wrap,.booking .wrap{grid-template-columns:1fr}
+ .dishes,.rv-grid{grid-template-columns:1fr 1fr}
+ .env-grid{grid-template-columns:1fr 1fr;grid-template-rows:160px 160px 160px}
+ .env-grid div:first-child{grid-column:span 2;grid-row:auto}
+ section{padding:70px 0}
+ .mbar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;background:#fff;box-shadow:0 -4px 20px rgba(0,0,0,.1)}
+ .mbar a{flex:1;text-align:center;padding:14px;font-weight:600}
+ .mbar a:last-child{background:var(--red);color:#fff}
+ body{padding-bottom:52px}
+}
+@media(max-width:560px){.dishes,.rv-grid,.r2{grid-template-columns:1fr}.btn-l{margin:12px 0 0}.feats{grid-template-columns:1fr 1fr 1fr}.sec-h h2{font-size:30px}form{padding:24px}}
+</style>
+</head>
+<body>
+
+<header id="hd">
+ <div class="wrap nav">
+  <a href="#" class="logo serif"><span class="seal">山</span>山野小馆</a>
+  <nav id="nav"><ul>
+   <li><a href="#story">品牌故事</a></li>
+   <li><a href="#menu">招牌菜单</a></li>
+   <li><a href="#env">用餐环境</a></li>
+   <li><a href="#reviews">食客评价</a></li>
+   <li><a href="#booking">门店信息</a></li>
+  </ul></nav>
+  <a href="#booking" class="book">在线订座</a>
+  <button class="burger" aria-label="菜单" onclick="document.getElementById('nav').classList.toggle('open')"><span></span><span></span><span></span></button>
+ </div>
+</header>
+
+<div class="hero">
+ 
+ <div class="wrap">
+  <small>SINCE 2016 · 云南风味</small>
+  <h1 class="serif">一口山野<br>鲜到心里</h1>
+  <p>每日清晨从云南产地直采野生菌，冷链空运到店。用一锅清汤，还原大山里最本真的味道。</p>
+  <a href="#booking" class="btn btn-r">立即订座</a><a href="#menu" class="btn btn-l">查看菜单</a>
+  <div class="hours"><b>营业时间</b>每日 11:00 – 22:00 · 人均 ¥128</div>
+ </div>
+</div>
+
+<section class="story" id="story">
+ <div class="wrap">
+  <div class="story-img"><img src="https://images.unsplash.com/photo-1600995942515-98058aab6ed1?auto=format&fit=crop&w=900&q=75" alt="云南山野里的野生菌" loading="lazy">
+  </div>
+  <div>
+   <div class="sec-h" style="text-align:left;margin-bottom:6px"><small>OUR STORY</small></div>
+   <h2 class="serif">从山里来，带着雨后的鲜</h2>
+   <p>老板阿木是云南楚雄人，从小跟着阿妈进山捡菌子。2016 年，他把家乡的味道带到了城市，开了第一家山野小馆。</p>
+   <p>我们坚持只用当季野生菌，鸡汤每天现熬 8 小时，不加一粒味精。想让每位客人吃到的，都是大山的原味。</p>
+   <div class="feats">
+    <div class="feat"><b>8h</b><span>每日现熬汤底</span></div>
+    <div class="feat"><b>24h</b><span>产地直达到店</span></div>
+    <div class="feat"><b>6</b><span>家城市门店</span></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="menu" id="menu">
+ <div class="wrap">
+  <div class="sec-h"><small>SIGNATURE MENU</small><h2 class="serif">招牌菜单</h2><div class="divider"></div></div>
+  <div class="tabs">
+   <button class="tab on" data-f="all">全部</button>
+   <button class="tab" data-f="pot">菌菇火锅</button>
+   <button class="tab" data-f="dish">山野小炒</button>
+   <button class="tab" data-f="snack">特色小吃</button>
+  </div>
+  <div class="dishes">
+   <div class="dish" data-c="pot"><div class="dish-img"><span class="hot">招牌</span><img src="https://images.unsplash.com/photo-1791409700354-f8da4a380759?auto=format&fit=crop&w=700&q=75" alt="野生菌王锅" loading="lazy"></div><div class="dish-b"><div class="t"><h4>野生菌王锅</h4><span class="price"><small>¥</small>198</span></div><p>松茸、牛肝菌、鸡枞等 9 种野生菌，配土鸡汤底，2-3 人份。</p></div></div>
+   <div class="dish" data-c="pot"><div class="dish-img"><img src="https://images.unsplash.com/photo-1791409700484-e755b72c2b00?auto=format&fit=crop&w=700&q=75" alt="酸汤鸡枞锅" loading="lazy"></div><div class="dish-b"><div class="t"><h4>酸汤鸡枞锅</h4><span class="price"><small>¥</small>168</span></div><p>木姜子酸汤搭配鲜鸡枞，酸爽开胃，越吃越香。</p></div></div>
+   <div class="dish" data-c="dish"><div class="dish-img"><span class="hot">人气</span><img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=700&q=75" alt="干巴菌炒饭" loading="lazy"></div><div class="dish-b"><div class="t"><h4>干巴菌炒饭</h4><span class="price"><small>¥</small>58</span></div><p>云南"菌中之王"干巴菌，手撕后大火爆炒，粒粒喷香。</p></div></div>
+   <div class="dish" data-c="dish"><div class="dish-img"><img src="https://images.unsplash.com/photo-1508338712271-40539c947a8b?auto=format&fit=crop&w=700&q=75" alt="黄焖牛肝菌" loading="lazy"></div><div class="dish-b"><div class="t"><h4>黄焖牛肝菌</h4><span class="price"><small>¥</small>78</span></div><p>黄牛肝菌配青红椒，滑嫩鲜香，下饭神器。</p></div></div>
+   <div class="dish" data-c="snack"><div class="dish-img"><img src="https://images.unsplash.com/photo-1789999017879-0d39e2b434cf?auto=format&fit=crop&w=700&q=75" alt="石屏烤豆腐" loading="lazy"></div><div class="dish-b"><div class="t"><h4>石屏烤豆腐</h4><span class="price"><small>¥</small>28</span></div><p>炭火现烤，外酥里嫩，蘸上秘制干辣椒面。</p></div></div>
+   <div class="dish" data-c="snack"><div class="dish-img"><img src="https://images.unsplash.com/photo-1791329066404-7ebd02f3ffd3?auto=format&fit=crop&w=700&q=75" alt="鲜花饼" loading="lazy"></div><div class="dish-b"><div class="t"><h4>鲜花饼（4 枚）</h4><span class="price"><small>¥</small>32</span></div><p>玫瑰花瓣现做馅料，酥皮层层分明，饭后甜点首选。</p></div></div>
+  </div>
+ </div>
+</section>
+
+<section id="env">
+ <div class="wrap">
+  <div class="sec-h"><small>ENVIRONMENT</small><h2 class="serif">用餐环境</h2><p>木质原生态装修，适合家庭聚餐、朋友小聚、商务宴请</p></div>
+  <div class="env-grid">
+   <div style="background:linear-gradient(transparent 55%,rgba(0,0,0,.55)),url('https://images.unsplash.com/photo-1670819917685-f1040e76b9b7?auto=format&fit=crop&w=900&q=75') center/cover"><span>大堂 · 可容纳 120 人</span></div>
+   <div style="background:linear-gradient(transparent 55%,rgba(0,0,0,.55)),url('https://images.unsplash.com/photo-1769638913500-4a0b6ac4561a?auto=format&fit=crop&w=900&q=75') center/cover"><span>VIP 包间 × 8</span></div>
+   <div style="background:linear-gradient(transparent 55%,rgba(0,0,0,.55)),url('https://images.unsplash.com/photo-1668270973870-bb22ba5d1381?auto=format&fit=crop&w=900&q=75') center/cover"><span>明档厨房</span></div>
+   <div style="background:linear-gradient(transparent 55%,rgba(0,0,0,.55)),url('https://images.unsplash.com/photo-1790958363213-b6346cb10004?auto=format&fit=crop&w=900&q=75') center/cover"><span>露台花园</span></div>
+   <div style="background:linear-gradient(transparent 55%,rgba(0,0,0,.55)),url('https://images.unsplash.com/photo-1671211702536-f864c42f360a?auto=format&fit=crop&w=900&q=75') center/cover"><span>茶歇区</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="reviews" id="reviews">
+ <div class="wrap">
+  <div class="sec-h"><small>REVIEWS</small><h2 class="serif">食客评价</h2><p>评价区可接入大众点评/美团等平台的真实评价</p></div>
+  <div class="rv-grid">
+   <div class="rv"><div class="stars">★★★★★</div><p>此处展示顾客评价内容。建议上线后替换为门店真实评价截图或平台评价。</p><div class="who"><div class="av">A</div>顾客昵称 · 评价来源</div></div>
+   <div class="rv"><div class="stars">★★★★★</div><p>此处展示顾客评价内容。可按“菜品口味 / 服务 / 环境”等维度挑选有代表性的评价。</p><div class="who"><div class="av">B</div>顾客昵称 · 评价来源</div></div>
+   <div class="rv"><div class="stars">★★★★★</div><p>此处展示顾客评价内容。真实评价比任何广告词都更有说服力。</p><div class="who"><div class="av">C</div>顾客昵称 · 评价来源</div></div>
+  </div>
+  <p class="note">* 模板占位内容，交付时替换为门店真实评价</p>
+ </div>
+</section>
+
+<section class="booking" id="booking">
+ <div class="wrap">
+  <div class="bk-info">
+   <div class="sec-h" style="text-align:left;margin-bottom:6px"><small>VISIT US</small></div>
+   <h2 class="serif">门店信息</h2>
+   <p>建议提前预订，周末及节假日包间紧张。</p>
+   <div class="line"><i>⌖</i><div><b>某某市某某区美食街 66 号 2 楼</b><span>地铁 2 号线某某站 B 口步行 300 米</span></div></div>
+   <div class="line"><i>☏</i><div><b>订座电话：000-0000-0000</b><span>包间预订请提前 1 天</span></div></div>
+   <div class="line"><i>◷</i><div><b>每日 11:00 – 22:00</b><span>午市 11:00-14:30 · 晚市 17:00-22:00</span></div></div>
+   <div class="line"><i>P</i><div><b>免费停车 2 小时</b><span>商场地下停车场</span></div></div>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';this.reset()">
+   <h3 class="serif">在线订座</h3>
+   <div class="r2">
+    <div><label>姓名 *</label><input required placeholder="怎么称呼您"></div>
+    <div><label>手机号 *</label><input required type="tel" placeholder="用于确认订座"></div>
+   </div>
+   <div class="r2">
+    <div><label>用餐日期 *</label><input required type="date" id="d"></div>
+    <div><label>用餐时段</label><select><option>午市 11:00-14:30</option><option>晚市 17:00-19:00</option><option>晚市 19:00-22:00</option></select></div>
+   </div>
+   <label>用餐人数</label>
+   <div class="seats">
+    <label><input type="radio" name="p" checked><span>1-2 人</span></label>
+    <label><input type="radio" name="p"><span>3-4 人</span></label>
+    <label><input type="radio" name="p"><span>5-8 人</span></label>
+    <label><input type="radio" name="p"><span>包间</span></label>
+   </div>
+   <label>备注</label><textarea rows="3" placeholder="如：宝宝椅、生日布置、忌口等"></textarea>
+   <button class="btn btn-r" type="submit">提交预订</button>
+   <div class="ok">✓ 预订已提交，我们会在 30 分钟内电话确认。</div>
+  </form>
+ </div>
+</section>
+
+<footer>
+ <div class="logo serif"><span class="seal">山</span>山野小馆</div>
+ <p>© 2026 山野小馆（演示网站，品牌及内容均为虚构 · 图片来自 Unsplash）</p>
+</footer>
+
+<div class="mbar"><a href="tel:000-0000-0000">☏ 电话</a><a href="#booking">立即订座</a></div>
+
+<script>
+const hd=document.getElementById('hd');
+addEventListener('scroll',()=>hd.classList.toggle('solid',scrollY>60));
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
+ document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));t.classList.add('on');
+ document.querySelectorAll('.dish').forEach(d=>d.classList.toggle('hide',t.dataset.f!=='all'&&d.dataset.c!==t.dataset.f));
+});
+const d=document.getElementById('d');d.min=new Date().toISOString().slice(0,10);
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+</script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Novaline Lighting | LED Lighting Manufacturer & OEM Supplier</title>
+<meta name="description" content="Novaline Lighting is a professional LED lighting manufacturer offering OEM/ODM services. CE, RoHS, UL certified. Factory-direct prices, fast delivery worldwide.">
+<style>
+:root{--dark:#0f1a24;--teal:#0fa3a3;--teal-d:#0b7f7f;--lime:#c6f432;--ink:#18222c;--muted:#64707c;--bg:#f5f7f8;--line:#e2e7ea}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Inter","Segoe UI",-apple-system,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.65}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.topbar{background:var(--dark);color:rgba(255,255,255,.7);font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;height:38px;align-items:center}
+.topbar span{margin-right:22px}
+.lang{display:flex;gap:10px}.lang a.on{color:var(--lime)}
+header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;letter-spacing:-.5px}
+.logo i{width:34px;height:34px;border-radius:50%;background:conic-gradient(var(--teal),var(--lime),var(--teal));display:block;position:relative}
+.logo i::after{content:"";position:absolute;inset:8px;border-radius:50%;background:#fff}
+nav ul{display:flex;gap:32px;list-style:none;font-weight:500;font-size:15px}
+nav a:hover{color:var(--teal)}
+.q{background:var(--teal);color:#fff;padding:10px 22px;border-radius:6px;font-weight:600;font-size:15px}
+.q:hover{background:var(--teal-d)}
+.burger{display:none;background:none;border:0;cursor:pointer}
+.burger span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0}
+.hero{background:linear-gradient(90deg,rgba(15,26,36,.96) 0%,rgba(15,26,36,.85) 50%,rgba(15,26,36,.45) 100%),url("https://images.unsplash.com/photo-1771531072574-af6ed6b954c0?auto=format&fit=crop&w=1800&q=75") center/cover;color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:700px;height:700px;right:-160px;top:-200px;background:radial-gradient(circle,rgba(15,163,163,.35),transparent 65%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1fr;gap:40px;align-items:center;padding-top:90px;padding-bottom:90px}
+.pill{display:inline-flex;gap:8px;align-items:center;font-size:13px;border:1px solid rgba(255,255,255,.2);padding:5px 14px;border-radius:20px;margin-bottom:22px}
+.pill b{width:8px;height:8px;border-radius:50%;background:var(--lime)}
+.hero h1{font-size:52px;line-height:1.12;letter-spacing:-1.5px;margin-bottom:20px}
+.hero h1 span{color:var(--lime)}
+.hero p{font-size:18px;color:rgba(255,255,255,.75);max-width:520px;margin-bottom:34px}
+.btn{display:inline-block;padding:14px 30px;border-radius:6px;font-weight:600;font-size:16px;transition:.2s;border:2px solid transparent;cursor:pointer}
+.btn-l{background:var(--lime);color:var(--dark)}.btn-l:hover{background:#b3e01f}
+.btn-o{border-color:rgba(255,255,255,.35);color:#fff;margin-left:10px}.btn-o:hover{border-color:#fff}
+.trust{display:flex;gap:28px;margin-top:44px;flex-wrap:wrap}
+.trust div b{display:block;font-size:28px;color:#fff}
+.trust div{font-size:13px;color:rgba(255,255,255,.6)}
+.hero-art svg{width:100%;max-width:500px;display:block;margin:auto}
+.certs{background:var(--bg);border-bottom:1px solid var(--line)}
+.certs .wrap{display:flex;justify-content:space-between;align-items:center;padding:26px 20px;flex-wrap:wrap;gap:20px}
+.certs p{font-size:14px;color:var(--muted);font-weight:500}
+.cert-list{display:flex;gap:16px;flex-wrap:wrap}
+.cert{border:2px solid #c4ccd2;color:#6b7680;font-weight:800;padding:6px 14px;border-radius:6px;font-size:15px;letter-spacing:1px}
+section{padding:90px 0}
+.sec-h{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:46px;gap:20px;flex-wrap:wrap}
+.sec-h small{color:var(--teal);font-weight:700;letter-spacing:2px;font-size:13px;text-transform:uppercase}
+.sec-h h2{font-size:38px;letter-spacing:-1px;line-height:1.2;margin-top:6px}
+.sec-h p{color:var(--muted);max-width:420px}
+.center{text-align:center;display:block}.center p{margin:10px auto 0}
+.prods{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.prod{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;transition:.25s;display:flex;flex-direction:column}
+.prod:hover{border-color:var(--teal);box-shadow:0 16px 40px rgba(15,163,163,.14)}
+.prod-img{aspect-ratio:1;background:var(--bg);display:grid;place-items:center;position:relative}
+.prod-img{aspect-ratio:4/3;overflow:hidden}.prod-img img{width:100%;height:100%;object-fit:cover;display:block;transition:.4s}.prod:hover .prod-img img{transform:scale(1.06)}.badge{z-index:2}
+.badge{position:absolute;top:12px;left:12px;background:var(--dark);color:var(--lime);font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px}
+.prod-b{padding:18px 20px 22px;display:flex;flex-direction:column;flex:1}
+.prod-b small{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:1px}
+.prod-b h4{font-size:17px;margin:4px 0 10px}
+.spec{font-size:13px;color:var(--muted);margin-bottom:16px;flex:1}
+.spec div{display:flex;justify-content:space-between;border-bottom:1px dashed var(--line);padding:4px 0}
+.spec b{color:var(--ink);font-weight:600}
+.prod-b a{font-weight:600;color:var(--teal);font-size:14px}
+.prod-b a:hover{text-decoration:underline}
+.why{background:var(--bg)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.w{background:#fff;padding:32px;border-radius:12px;border:1px solid var(--line)}
+.w .n{font-size:14px;font-weight:800;color:var(--teal);margin-bottom:16px;display:inline-block;padding:4px 10px;background:rgba(15,163,163,.1);border-radius:4px}
+.w h3{font-size:20px;margin-bottom:8px}
+.w p{color:var(--muted);font-size:15px}
+.oem .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.oem-box{background:var(--dark);border-radius:16px;padding:40px;color:#fff}
+.oem-img{display:block;width:calc(100% + 80px);margin:-40px -40px 28px;aspect-ratio:16/7;object-fit:cover;border-radius:16px 16px 0 0}
+.oem-box{overflow:hidden}
+.oem-box h4{color:var(--lime);margin-bottom:20px;font-size:14px;letter-spacing:2px}
+.flow{list-style:none;counter-reset:f}
+.flow li{counter-increment:f;display:flex;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.flow li::before{content:counter(f);flex:none;width:30px;height:30px;border-radius:50%;background:var(--teal);display:grid;place-items:center;font-weight:700;font-size:14px}
+.flow b{display:block}
+.flow span{font-size:14px;color:rgba(255,255,255,.6)}
+.oem h2{font-size:36px;letter-spacing:-1px;margin:6px 0 18px;line-height:1.2}
+.oem p{color:var(--muted);margin-bottom:22px}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.tags span{background:var(--bg);border:1px solid var(--line);padding:6px 14px;border-radius:20px;font-size:14px}
+.btn-t{background:var(--teal);color:#fff}.btn-t:hover{background:var(--teal-d)}
+.markets{background:var(--dark);color:#fff;text-align:center}
+.markets h2{font-size:34px;letter-spacing:-1px;margin-bottom:10px}
+.markets p{color:rgba(255,255,255,.6);margin-bottom:40px}
+.mk{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.mk div{border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:24px 10px}
+.mk b{display:block;font-size:30px;color:var(--lime)}
+.mk span{font-size:14px;color:rgba(255,255,255,.7)}
+.faq{max-width:820px;margin:0 auto}
+details{border:1px solid var(--line);border-radius:10px;margin-bottom:12px;background:#fff}
+summary{padding:18px 22px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+summary::after{content:"+";font-size:22px;color:var(--teal);line-height:1}
+details[open] summary::after{content:"–"}
+details p{padding:0 22px 20px;color:var(--muted)}
+.inq{background:var(--bg)}
+.inq .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px}
+.inq h2{font-size:36px;letter-spacing:-1px;margin:6px 0 14px;line-height:1.2}
+.inq-info p{color:var(--muted);margin-bottom:26px}
+.ci{display:flex;gap:14px;margin-bottom:18px;align-items:center}
+.ci i{width:44px;height:44px;border-radius:10px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;font-style:normal;color:var(--teal);font-weight:700;flex:none}
+.ci span{font-size:13px;color:var(--muted);display:block}
+form{background:#fff;border-radius:14px;padding:34px;box-shadow:0 12px 40px rgba(15,26,36,.07)}
+.r2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
+input,select,textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:8px;font:inherit;font-size:15px;margin-bottom:16px}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--teal);box-shadow:0 0 0 3px rgba(15,163,163,.12)}
+textarea{min-height:110px}
+form .btn{width:100%}
+.ok{display:none;margin-top:12px;padding:12px;background:#e7f7f2;color:#0b7f5f;border-radius:8px;text-align:center}
+footer{background:var(--dark);color:rgba(255,255,255,.6);font-size:14px;padding:56px 0 24px}
+.fg{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px;margin-bottom:36px}
+footer h5{color:#fff;font-size:15px;margin-bottom:14px}
+footer li{list-style:none;padding:3px 0}
+footer a:hover{color:var(--lime)}
+footer .logo{color:#fff;margin-bottom:14px}
+footer .logo i::after{background:var(--dark)}
+.copy{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;text-align:center;font-size:13px}
+.wa{position:fixed;right:20px;bottom:24px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(37,211,102,.4)}
+.wa svg{width:28px;height:28px}
+@media(max-width:1000px){
+ nav ul,.q{display:none}.burger{display:block}
+ nav.open ul{display:flex;flex-direction:column;position:absolute;top:74px;left:0;right:0;background:#fff;padding:20px;gap:16px;border-bottom:1px solid var(--line)}
+ .hero .wrap,.oem .wrap,.inq .wrap{grid-template-columns:1fr}
+ .hero-art{display:none}
+ .hero h1{font-size:38px}
+ .prods{grid-template-columns:repeat(2,1fr)}
+ .why-grid{grid-template-columns:1fr}
+ .mk{grid-template-columns:repeat(3,1fr)}
+ .fg{grid-template-columns:1fr 1fr}
+ section{padding:64px 0}
+ .sec-h h2{font-size:30px}
+ .topbar span:nth-child(2){display:none}
+}
+@media(max-width:560px){.prods,.r2{grid-template-columns:1fr}.mk{grid-template-columns:1fr 1fr}.btn-o{margin:12px 0 0}form,.oem-box{padding:24px}.oem-img{width:calc(100% + 48px);margin:-24px -24px 22px}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap"><div><span>✉ sales@example.com</span><span>☏ +86 000 0000 0000</span></div><div class="lang"><a href="#" class="on">EN</a><a href="#">ES</a><a href="#">FR</a><a href="#">DE</a></div></div></div>
+
+<header>
+ <div class="wrap nav">
+  <a href="#" class="logo"><i></i>Novaline</a>
+  <nav id="nav"><ul>
+   <li><a href="#products">Products</a></li>
+   <li><a href="#why">Why Us</a></li>
+   <li><a href="#oem">OEM / ODM</a></li>
+   <li><a href="#faq">FAQ</a></li>
+   <li><a href="#contact">Contact</a></li>
+  </ul></nav>
+  <a href="#contact" class="q">Get a Quote</a>
+  <button class="burger" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')"><span></span><span></span><span></span></button>
+ </div>
+</header>
+
+<div class="hero">
+ <div class="wrap">
+  <div>
+   <div class="pill"><b></b>Factory-direct · OEM & ODM Available</div>
+   <h1>Professional <span>LED Lighting</span> Manufacturer Since 2012</h1>
+   <p>Commercial, industrial and outdoor LED solutions trusted by distributors and contractors in 60+ countries. Low MOQ, 5-year warranty, fast global delivery.</p>
+   <a href="#contact" class="btn btn-l">Request a Quote</a><a href="#products" class="btn btn-o">View Catalog</a>
+   <div class="trust">
+    <div><b>60+</b>Countries Served</div>
+    <div><b>30,000㎡</b>Factory Area</div>
+    <div><b>5 Years</b>Warranty</div>
+   </div>
+  </div>
+  
+ </div>
+</div>
+
+<div class="certs"><div class="wrap"><p>Certified to international standards</p><div class="cert-list"><span class="cert">CE</span><span class="cert">RoHS</span><span class="cert">UL</span><span class="cert">ETL</span><span class="cert">SAA</span><span class="cert">ISO 9001</span></div></div></div>
+
+<section id="products">
+ <div class="wrap">
+  <div class="sec-h"><div><small>Product Range</small><h2>Best-Selling Products</h2></div><p>All products support custom wattage, CCT, beam angle, logo and packaging.</p></div>
+  <div class="prods">
+   <div class="prod"><div class="prod-img"><span class="badge">HOT</span><img src="https://images.unsplash.com/photo-1694885169342-909981fb408a?auto=format&fit=crop&w=600&q=75" alt="UFO high bay light in warehouse" loading="lazy"></div><div class="prod-b"><small>Industrial</small><h4>UFO High Bay Light</h4><div class="spec"><div>Power<b>100–240W</b></div><div>Efficacy<b>160 lm/W</b></div><div>IP Rating<b>IP65</b></div></div><a href="#contact">Inquire Now →</a></div></div>
+   <div class="prod"><div class="prod-img"><img src="https://images.unsplash.com/photo-1566276423184-a8c13d2a88a1?auto=format&fit=crop&w=600&q=75" alt="LED street lights on road" loading="lazy"></div><div class="prod-b"><small>Outdoor</small><h4>LED Street Light</h4><div class="spec"><div>Power<b>50–300W</b></div><div>Lifespan<b>100,000h</b></div><div>IP Rating<b>IP66</b></div></div><a href="#contact">Inquire Now →</a></div></div>
+   <div class="prod"><div class="prod-img"><span class="badge">NEW</span><img src="https://images.unsplash.com/photo-1509928015542-fcc9b3bcd048?auto=format&fit=crop&w=600&q=75" alt="Stadium flood lights" loading="lazy"></div><div class="prod-b"><small>Outdoor</small><h4>Stadium Flood Light</h4><div class="spec"><div>Power<b>200–1000W</b></div><div>Beam<b>15°/30°/60°</b></div><div>IP Rating<b>IP66</b></div></div><a href="#contact">Inquire Now →</a></div></div>
+   <div class="prod"><div class="prod-img"><img src="https://images.unsplash.com/photo-1770816307507-5dc610ffa704?auto=format&fit=crop&w=600&q=75" alt="Linear pendant lights in office" loading="lazy"></div><div class="prod-b"><small>Commercial</small><h4>Linear Pendant Light</h4><div class="spec"><div>Length<b>0.6–2.4m</b></div><div>CRI<b>Ra &gt; 90</b></div><div>Dimming<b>0-10V / DALI</b></div></div><a href="#contact">Inquire Now →</a></div></div>
+  </div>
+ </div>
+</section>
+
+<section class="why" id="why">
+ <div class="wrap">
+  <div class="sec-h center"><small>Why Choose Us</small><h2>Your Reliable Lighting Partner</h2><p>We help importers, wholesalers and project contractors win more business.</p></div>
+  <div class="why-grid">
+   <div class="w"><span class="n">01</span><h3>Factory-Direct Pricing</h3><p>No middlemen. In-house SMT, die-casting and assembly lines keep costs competitive.</p></div>
+   <div class="w"><span class="n">02</span><h3>Strict Quality Control</h3><p>100% aging test for 8 hours before shipment. Third-party inspection welcome.</p></div>
+   <div class="w"><span class="n">03</span><h3>Low MOQ & Fast Samples</h3><p>MOQ from 50 pcs. Samples ready in 3–7 days, mass production in 15–25 days.</p></div>
+   <div class="w"><span class="n">04</span><h3>Free Lighting Design</h3><p>Our engineers provide DIALux simulation for your projects at no cost.</p></div>
+   <div class="w"><span class="n">05</span><h3>5-Year Warranty</h3><p>Long warranty with free replacement parts and responsive after-sales support.</p></div>
+   <div class="w"><span class="n">06</span><h3>24h Response</h3><p>Dedicated sales manager replies to every inquiry within 24 hours.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="oem" id="oem">
+ <div class="wrap">
+  <div>
+   <small style="color:var(--teal);font-weight:700;letter-spacing:2px;font-size:13px">OEM / ODM SERVICE</small>
+   <h2>Build Your Own Lighting Brand With Us</h2>
+   <p>From logo printing to fully custom product development, our R&D team turns your idea into a market-ready product.</p>
+   <div class="tags"><span>Custom Logo</span><span>Private Label Packaging</span><span>Custom Wattage / CCT</span><span>New Housing Design</span><span>Smart Control</span></div>
+   <a href="#contact" class="btn btn-t">Start Your OEM Project</a>
+  </div>
+  <div class="oem-box">
+   <img src="https://images.unsplash.com/photo-1589793463357-5fb813435467?auto=format&fit=crop&w=900&q=75" alt="Novaline assembly line" loading="lazy" class="oem-img">
+   <h4>HOW IT WORKS</h4>
+   <ol class="flow">
+    <li><div><b>Send Requirements</b><span>Specs, drawings or reference samples</span></div></li>
+    <li><div><b>Get Solution & Quote</b><span>Within 24 hours</span></div></li>
+    <li><div><b>Sample Confirmation</b><span>3–7 working days</span></div></li>
+    <li><div><b>Mass Production</b><span>With photo/video updates</span></div></li>
+    <li><div><b>Inspection & Shipping</b><span>FOB, CIF, DDP available</span></div></li>
+   </ol>
+  </div>
+ </div>
+</section>
+
+<section class="markets">
+ <div class="wrap">
+  <h2>Trusted Worldwide</h2>
+  <p>Our products are installed in warehouses, factories, roads and stadiums across 5 continents.</p>
+  <div class="mk">
+   <div><b>35%</b><span>Europe</span></div>
+   <div><b>25%</b><span>North America</span></div>
+   <div><b>18%</b><span>Middle East</span></div>
+   <div><b>12%</b><span>Southeast Asia</span></div>
+   <div><b>10%</b><span>Latin America</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="faq">
+ <div class="wrap">
+  <div class="sec-h center"><small>FAQ</small><h2>Frequently Asked Questions</h2></div>
+  <div class="faq">
+   <details open><summary>What is your MOQ?</summary><p>Our standard MOQ is 50 pcs per model. Sample orders of 1–5 pcs are accepted for quality testing.</p></details>
+   <details><summary>Can I get a sample before placing an order?</summary><p>Yes. Samples are available in 3–7 days. Sample cost can be refunded once you place a bulk order.</p></details>
+   <details><summary>What payment terms do you accept?</summary><p>T/T (30% deposit, 70% before shipment), L/C at sight, PayPal and Western Union for small orders.</p></details>
+   <details><summary>How long is the delivery time?</summary><p>Usually 15–25 days after deposit for bulk orders, depending on quantity and customization.</p></details>
+   <details><summary>Do you provide OEM service?</summary><p>Yes. We offer custom logo, packaging, specifications and fully new product development.</p></details>
+  </div>
+ </div>
+</section>
+
+<section class="inq" id="contact">
+ <div class="wrap">
+  <div class="inq-info">
+   <small style="color:var(--teal);font-weight:700;letter-spacing:2px;font-size:13px">CONTACT US</small>
+   <h2>Get a Free Quote Within 24 Hours</h2>
+   <p>Tell us about your project. Our sales team will send you the catalog and best price.</p>
+   <div class="ci"><i>@</i><div><span>Email</span><b>sales@example.com</b></div></div>
+   <div class="ci"><i>W</i><div><span>WhatsApp / WeChat</span><b>+86 000 0000 0000</b></div></div>
+   <div class="ci"><i>⌖</i><div><span>Factory</span><b>Industrial Zone, Guangdong, China</b></div></div>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';this.reset()">
+   <div class="r2">
+    <div><label>Name *</label><input required placeholder="Your name"></div>
+    <div><label>Email *</label><input required type="email" placeholder="you@company.com"></div>
+   </div>
+   <div class="r2">
+    <div><label>Company</label><input placeholder="Company name"></div>
+    <div><label>Country</label><input placeholder="e.g. Germany"></div>
+   </div>
+   <div class="r2">
+    <div><label>Product Interest</label><select><option>High Bay Light</option><option>Street Light</option><option>Flood Light</option><option>Linear Light</option><option>OEM / Custom</option></select></div>
+    <div><label>Quantity</label><input placeholder="e.g. 500 pcs"></div>
+   </div>
+   <label>Message *</label><textarea required placeholder="Specifications, application, target price..."></textarea>
+   <button class="btn btn-t" type="submit">Send Inquiry</button>
+   <div class="ok">✓ Thank you! We will reply within 24 hours.</div>
+  </form>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <div class="fg">
+   <div><a href="#" class="logo"><i></i>Novaline</a><p>Professional LED lighting manufacturer providing reliable products and OEM/ODM solutions to global partners.</p></div>
+   <div><h5>Products</h5><ul><li><a href="#products">High Bay Light</a></li><li><a href="#products">Street Light</a></li><li><a href="#products">Flood Light</a></li><li><a href="#products">Linear Light</a></li></ul></div>
+   <div><h5>Company</h5><ul><li><a href="#why">About Us</a></li><li><a href="#oem">OEM / ODM</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+   <div><h5>Contact</h5><ul><li>sales@example.com</li><li>+86 000 0000 0000</li></ul></div>
+  </div>
+  <div class="copy">© 2026 Novaline Lighting (Demo website — brand and content are fictional · Photos: Unsplash)</div>
+ </div>
+</footer>
+
+<a href="#contact" class="wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
+
+<script>
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+</script>
+</body>
+</html>
